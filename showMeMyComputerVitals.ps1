@@ -1,6 +1,7 @@
 # Log file path and file name appended with timestamp to accomodate rolling logs
 $logFile = "$HOME\System_Vitals_$(Get-Date -Format 'yyyyMMdd_HHmmss').log"
 
+# Simple error checking implemented (try, catch) and user-friendly CLI outputting for script run status.
 try {
     # How much disk space is left?
     $diskSpace = Get-PSDrive -PSProvider FileSystem | Select-Object Name, @{Name="Free"; Expression={[math]::Round($_.Free / 1GB, 2)}}
@@ -17,7 +18,7 @@ try {
     # Is the printer still talking to us?
     $printerStatus = Get-Printer | Select-Object Name, @{Name="Printer Status"; Expression={$_.PrinterStatus}}
 
-    # Format and save to log
+    # Viewer-friendly formatting using labels, tables, and trim. Save to log file.
     $logData = @"
 System Vitals Report - $(Get-Date)
 =====================================================
