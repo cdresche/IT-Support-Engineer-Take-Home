@@ -3,7 +3,7 @@
 ## Windows Workstation Onboarding Process
 
 ### Pre-Monday Automated Workflow
-A New Hire Request in Service Ticketing System triggers an automated workflow:
+A New Hire Request in service ticketing system triggers an automated workflow:
 
 1. Create the user's Microsoft Entra ID (Azure AD) account  
 2. Assign Microsoft 365, Slack, Bitwarden, and VPN licenses  
@@ -23,7 +23,7 @@ A New Hire Request in Service Ticketing System triggers an automated workflow:
    * VPN was auto-configured and tested  
    * Any non-standard software is installed  
    * Ensure Windows Defender is active, firewall rules are enforced  
-   * Label Desktop  
+   * Label Workstation  
 4. Assign the Desktop to the new user in the service ticket
 5. Mark the ticket as "Desktop Ready" or similar
 6. Restricts access to the Desktop until the new user logs in with Entra ID
@@ -48,11 +48,15 @@ A New Hire Request in Service Ticketing System triggers an automated workflow:
 IT Support updates ticket with any important information and then marks ticket as complete, which triggers a "Welcome Email" that could include:   
 * Login process details (no account information) & IT helpdesk links  
 * Security best practices & password management guide  
-* VPN access instructions & company policy documents
+* VPN access instructions
+* Company policy documents
+* How to access company resources
+* Team communication tools overview
 
 ## Ubuntu Linux Workstation Onboarding Process
 
 ### Pre-Monday Automated Workflow
+A New Hire Request in service ticketing system triggers an automated workflow:
 
 1. Create the developer's Microsoft Entra ID (Azure AD) account  
 2. Assign Microsoft 365, GitLab, Slack, Bitwarden, and VPN licenses  
@@ -97,9 +101,9 @@ IT Support updates ticket with any important information and then marks ticket a
    * Virtualization: KVM/QEMU, VMware, VirtualBox  
    * Password Management - Bitwarden (SSO with Entra ID)  
    * Network settings (DHCP or DHCP reservation)  
-   * Configures VPN (WireGuard/OpenVPN)  
+   * Configures VPN (OpenVPN)  
    * Maps network printers & drive mounts dynamically based on Entra ID group  
-   * Hardens system security policies (firewall, AppArmor, logging, intrusion detection)
+   * Hardens system security policies (firewall, logging)
 
 ### Build Verification
 
@@ -108,10 +112,11 @@ IT Support updates ticket with any important information and then marks ticket a
 3. Network connectivity  
 4. Verify logging authentication attempts  
 5. Confirm security updates are enabled  
-6. Assign the machine to the new user in the IT Asset Management System  
-7. Mark the service ticket as "Desktop Ready"
+6. Assign the machine to the new user in the IT Asset Management System
+7. Label workstation
+8. Mark the service ticket as "Workstation Ready"
 
-### First User Login
+### Assisted by IT, First User Login
 
 1. Logging in using the user's Microsoft Entra ID credentials and the temporary password  
    1. Entered by an IT Support Engineer or given to the new user via a company approved method  
@@ -123,10 +128,15 @@ IT Support updates ticket with any important information and then marks ticket a
 6. User logs into Bitwarden (SSO with Entra ID)  
 7. User home directory is automatically created upon first login  
 8. User open https://outlook.office.com for email & calendar access
+9. Verify printers and drives are mapped.
 
-### Completion
+### Setup Verification and Completion
 IT Support updates ticket with any important information and then marks ticket as complete, which triggers a "Welcome Email" that could include:   
 * Entra ID authentication guide for Linux login  
-* VPN access instructions & IT helpdesk links  
-* SSH key management guide & security reminders  
-* CI/CD pipeline documentation & access credentials
+* VPN configuration steps & IT helpdesk contact information  
+* SSH key generation and management best practices  
+* How to access the CI/CD documentation portal
+* Local development environment setup guides
+* How to request repository access
+* Team collaboration tools overview
+* Security best practices reminder
