@@ -1,11 +1,11 @@
 # IT Support Technical Take-Home
 
-A collection of practical IT support tasks and documentation focusing on efficient setup, system monitoring, and user support. These components showcase automated processes and clear documentation that can scale with a growing company.
+A collection of practical IT support tasks and documentation focusing on efficient onboarding, system monitoring, and user support. These components showcase automated processes and clear documentation that can scale with a growing company.
 
 ## What's Inside
 
 1. **Workstation Setup** - [View Documentation](setting-up-some-workstations.md)
-   - Windows and Ubuntu Linux workstation setup processes
+   - Windows and Ubuntu Linux workstation onboarding processes
    - Microsoft Entra ID integration
    - Automated workflows to save time
    - Security-focused implementation 
