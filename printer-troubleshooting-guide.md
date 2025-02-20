@@ -15,7 +15,7 @@
    - Check printer's display for error messages
 
 4. **Network Verification**
-   - Verify computer's network connection
+   - Verify your computer's network connection
    - Make sure you're logged in with your work account
    - Test if you can see other network resources (network drives)
    - Check if other programs work online
@@ -60,9 +60,9 @@
 - Current printing behavior
 
 ## Security Best Practices
+- Verify printer selection before printing
 - Use secure printers for sensitive documents
 - Collect prints promptly
-- Verify printer selection before printing
 
 ## Need Help?
 Contact IT Support:
