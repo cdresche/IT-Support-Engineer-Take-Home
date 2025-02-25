@@ -7,7 +7,7 @@ try {
     $diskSpace = Get-PSDrive -PSProvider FileSystem | Select-Object Name, @{Name="Free"; Expression={[math]::Round($_.Free / 1GB, 2)}}
 
     # What's the CPU up to?
-    $cpuUsage = Get-WmiObject Win32_Processor | Select-Object LoadPercentage
+    $cpuTotal = Get-Counter '\Processor(_Total)\% Processor Time' | Select-Object -ExpandProperty CounterSamples | Select-Object -ExpandProperty CookedValue
 
     # Memory usage
     $memory = Get-CimInstance Win32_OperatingSystem | Select-Object @{Name="Total Memory"; Expression={[math]::Round($_.TotalVisibleMemorySize / 1MB, 2)}}, @{Name="Free Memory"; Expression={[math]::Round($_.FreePhysicalMemory / 1MB, 2)}}
@@ -31,7 +31,7 @@ $(($diskSpace | Format-Table -Wrap -AutoSize | Out-String).Trim())
 
 CPU Usage (% Load):
 
-$($cpuUsage.LoadPercentage -join " ")
+$([math]::Round($cpuTotal, 2)) %
 
 -----------------------------------------------------
 
